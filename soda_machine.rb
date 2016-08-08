@@ -1,5 +1,5 @@
 class SodaMachine
-  attr_reader :sodas, :cash
+  attr_reader :soda, :cash
 
   def initialize(args = {})
     @sodas = args[:sodas]
@@ -11,11 +11,25 @@ class SodaMachine
   end
 
   def find_soda(soda_brand)
-    index = sodas.find_index(soda_brand.downcase)
-    sodas[index]
+    @sodas.each do | brand |
+      if brand.brand == soda_brand
+        return brand
+      end
+    end
+    nil
   end
 
+
   def sell(soda_brand)
+   @sodas.each do | brand |
+      if brand.brand == soda_brand
+        @cash = brand.price
+        @sodas.delete[brand]
+      end
+    end
+    nil
   end
 
 end
+
+
