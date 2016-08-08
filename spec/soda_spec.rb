@@ -5,7 +5,7 @@ describe Soda do
 
   it "has a brand" do
     expect(pepsi.brand).to eq("Pepsi")
-  end
+end
 
   it "has a price" do
     expect(pepsi.price).to eq(0.65)
