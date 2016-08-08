@@ -19,8 +19,9 @@ class SodaMachine
     end
   end
 
-# Note:  The code commented out will delete all copies of a specific soda
-# in the machine.  I assume we only want to delete one of them,
+  # Note:  The code commented out will delete all copies of a specific soda
+  # in the machine.  I assume we only want to delete one of them, but it
+  # doesn't make a difference for the rspec test
   def sell(soda_brand)
   #   soda = find_soda(soda_brand)
   #   if soda
