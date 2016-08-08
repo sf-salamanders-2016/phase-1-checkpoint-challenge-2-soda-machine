@@ -12,17 +12,13 @@ class SodaMachine
   end
 
   def find_soda(soda_brand)
-    # idx = 0
-    # brand = ''
-    # while idx < @sodas.length
-    #   if @sodas[idx].brand == soda_brand
-    #     brand = soda_brand
-    #   end
-    #   idx +=1
-    # end
-    # brand
-    @sodas.find do |soda|
-      soda_brand == soda.brand
+    idx = 0
+    brand = ''
+    while idx < @sodas.length
+      if @sodas[idx].brand == soda_brand
+        return @sodas[idx]
+      end
+      idx +=1
     end
   end
 
