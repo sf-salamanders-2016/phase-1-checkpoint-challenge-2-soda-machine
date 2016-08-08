@@ -1,5 +1,5 @@
 class SodaMachine
-  attr_reader :soda, :cash
+  attr_reader :soda, :cash, :sodas
 
   def initialize(args = {})
     @sodas = args[:sodas]
@@ -21,15 +21,12 @@ class SodaMachine
 
 
   def sell(soda_brand)
-   @sodas.each do | brand |
-      if brand.brand == soda_brand
-        @cash = brand.price
-        @sodas.delete[brand]
-      end
+    available_soda = find_soda(soda_brand)
+    if available_soda
+      @cash += available_soda.price
+      @sodas.delete(available_soda)
     end
-    nil
   end
-
 end
 
 
