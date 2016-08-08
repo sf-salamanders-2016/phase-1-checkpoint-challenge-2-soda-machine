@@ -13,7 +13,6 @@ class SodaMachine
 
   def find_soda(soda_brand)
     idx = 0
-    brand = ''
     while idx < @sodas.length
       if @sodas[idx].brand == soda_brand
         return @sodas[idx]
