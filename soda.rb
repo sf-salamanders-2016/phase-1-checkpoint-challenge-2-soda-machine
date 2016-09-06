@@ -5,4 +5,5 @@ class Soda
     @brand = args[:brand]
     @price = args[:price]
   end
+
 end
