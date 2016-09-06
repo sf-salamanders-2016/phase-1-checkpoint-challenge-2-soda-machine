@@ -15,6 +15,8 @@ class SodaMachine
   end
 
   def find_soda(soda_brand)
+    #   soda_index = @sodas.map(&:brand).index(soda_brand)
+    #   soda_index.nil? ? nil : @sodas[soda_index]
     @sodas.each { |soda| return soda if soda.brand == soda_brand }
     nil
   end
@@ -30,17 +32,3 @@ class SodaMachine
   end
 
 end
-
-
-
-
-
-
-# @sodas.map do |soda|
-#   @cash+= soda.price
-#   if soda.brand == soda_brand
-#     find_soda(soda_brand).delete(@sodas[index(soda_brand)])
-#   else
-#     return nil
-#   end
-# end
