@@ -1,5 +1,6 @@
 require_relative "spec_helper"
 
+
 describe SodaMachine do
   let (:pepsi) { Soda.new(brand: 'Pepsi', price: 0.65) }
   let (:mountain_dew) { Soda.new(brand: 'Mountain Dew', price: 0.75) }
@@ -15,6 +16,7 @@ describe SodaMachine do
   end
 
   describe "#find_soda", { find_soda: true } do
+
     context "when the soda is in the machine" do
       it "returns the soda the user requested" do
         expect(soda_machine.find_soda('Pepsi')).to eq(pepsi)
